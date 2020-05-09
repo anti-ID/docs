@@ -9,12 +9,12 @@ export const meta = {
   description: `Configuring ${PRODUCT_SHORT_V1_NAME} so that your deployments are exactly as you need them`,
   date: '22 Feb 2017',
   editUrl: 'pages/docs/v1/features/configuration.mdx',
-  lastEdited: '2020-04-20T22:15:55.000Z'
+  lastEdited: '2020-05-09T14:31:59.000Z'
 }
 
 This guide explains how to use these methods to configure and customize the default behavior of <CliV1Name />.
 
-In addition to the options available in the command line interface (like `--name` for setting the name of the deployment), we also support saving certain parameters into a config file, `now.json`.
+In addition to the options available in the command line interface (like `--name` for setting the name of the deployment), we also support saving certain parameters into a config file, `vercel.json`.
 
 ## Local Configuration
 
@@ -22,11 +22,11 @@ This describes the set of configuration rules that are applied per project. The 
 
 ## Configuration
 
-For every type of deployment, you can create a `now.json` file that contains your deployment's configuration.
+For every type of deployment, you can create a `vercel.json` file that contains your deployment's configuration.
 
 For example, consider a static deployment with some `.html` files in a directory called `my-website`.
 
-Since no configuration is supplied, the deployment's name is obtained from the directory. To customize this, you can create a `now.json` file inside it as follows:
+Since no configuration is supplied, the deployment's name is obtained from the directory. To customize this, you can create a `vercel.json` file inside it as follows:
 
 ```
 {
@@ -38,7 +38,7 @@ For a list of all available options, refer to the ["Settings"](#settings) sectio
 
 ### Settings
 
-All of the properties mentioned below can be used inside the `now.json` file:
+All of the properties mentioned below can be used inside the `vercel.json` file:
 
 #### `version` (number)
 
@@ -46,7 +46,7 @@ Specifies the [<ProductShortV1Name /> Platform version](/docs/v2/platform/overvi
 
 The default version for <ProductShortV1Name /> deployments is [version 2](/docs/v1-upgrade).
 
-To explicitly use [version 1 of <ProductShortV1Name />](/blog/now-2), use the following configuration in a `now.json` file.
+To explicitly use [version 1 of <ProductShortV1Name />](/blog/now-2), use the following configuration in a `vercel.json` file.
 
 ```
 "version": 1
@@ -214,7 +214,7 @@ This property takes precedence over `sh.api` in `config.json`.
 
 This describes the set of configuration rules that apply to <CliV1Name />.
 
-By default, they live in a directory named `.now` in your
+By default, they live in a directory named `.vercel` in your
 home directory. Within it, you can find two files (which you
 can learn more about below). If you need to specify a different location of the directory, you can use
 the `--global-config` flag in <CliV1Name />, which takes in a

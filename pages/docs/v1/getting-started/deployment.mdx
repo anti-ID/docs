@@ -13,7 +13,7 @@ export const meta = {
   description: `How to setup and deploy Node.js apps, Docker apps, or static websites with ${PRODUCT_SHORT_V1_NAME}`,
   date: '1 August 2017',
   editUrl: 'pages/docs/v1/getting-started/deployment.mdx',
-  lastEdited: '2020-04-14T00:02:08.000Z'
+  lastEdited: '2020-05-09T14:31:59.000Z'
 }
 
 With <ProductShortV1Name />, you can deploy any kind of web app by using a single command. <ProductShortV1Name /> supports three types of deployments:
@@ -126,12 +126,12 @@ CMD ["/go-http-microservice"]
 
 <Note>
   Without enabling <ProductShortV1Name /> Cloud v2 with the following{' '}
-  <InlineCode>now.json</InlineCode> configuration, the Dockerfile will require
-  an <InlineCode>EXPOSE</InlineCode> instruction. In this case it would be{' '}
-  <InlineCode>EXPOSE 3000</InlineCode>.
+  <InlineCode>vercel.json</InlineCode> configuration, the Dockerfile will
+  require an <InlineCode>EXPOSE</InlineCode> instruction. In this case it would
+  be <InlineCode>EXPOSE 3000</InlineCode>.
 </Note>
 
-### now.json
+### vercel.json
 
 ```
 {
@@ -142,7 +142,8 @@ CMD ["/go-http-microservice"]
 ```
 
 <Caption>
-  Enabling <ProductShortV1Name /> Cloud v2 from a `now.json` configuration file.
+  Enabling <ProductShortV1Name /> Cloud v2 from a `vercel.json` configuration
+  file.
 </Caption>
 
 ### .dockerignore

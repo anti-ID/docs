@@ -11,10 +11,10 @@ export const meta = {
     'All the configuration options you need to control static app deployments and what they do.',
   date: '22 August 2018',
   editUrl: 'pages/docs/v1/static-deployments/configuration.mdx',
-  lastEdited: '2020-04-14T00:02:08.000Z'
+  lastEdited: '2020-05-09T14:31:59.000Z'
 }
 
-In order to change the [default behavior of a static deployment](/docs/static-deployments/introduction-and-deploying#default-behavior) running on <ProductShortV1Name />, there are configuration options that can be used within a `static` property within a `now.json` file.
+In order to change the [default behavior of a static deployment](/docs/static-deployments/introduction-and-deploying#default-behavior) running on <ProductShortV1Name />, there are configuration options that can be used within a `static` property within a `vercel.json` file.
 
 ## Options
 
@@ -32,8 +32,8 @@ Following is a list of configuration options that enable static deployments to b
 
 <Note>
   All following descriptions of the configuration options contain usage examples
-  which are of a complete <InlineCode>now.json</InlineCode> configuration file,
-  but do not indicate a limit to the configuration.
+  which are of a complete <InlineCode>vercel.json</InlineCode> configuration
+  file, but do not indicate a limit to the configuration.
 </Note>
 
 ### public (String)
@@ -52,7 +52,7 @@ By default, the current working directory will be served. To serve a specific pa
 
 <Caption>
   An example of setting the directory `./dist` as the path to serve content
-  from, set within a `now.json` file.
+  from, set within a `vercel.json` file.
 </Caption>
 
 ### cleanUrls (Boolean|Array)
@@ -73,7 +73,7 @@ To disable this feature, pass `false` as the value.
 ```
 
 <Caption>
-  An example of disabling the `cleanUrls` feature from within a `now.json`
+  An example of disabling the `cleanUrls` feature from within a `vercel.json`
   coniguration file.
 </Caption>
 
@@ -89,7 +89,7 @@ Restrict this feature to certain paths using the following:
 
 <Caption>
   An example of restricting the `cleanUrls` feature to the `app` directory from
-  within a `now.json` coniguration file.
+  within a `vercel.json` coniguration file.
 </Caption>
 
 ### rewrites (Array)
@@ -108,7 +108,7 @@ Using the above example, setting up a rewrite from `projects/*/edit` to server `
 ```
 
 <Caption>
-  An example of a `rewrite` setup within a `now.json` configuration file that
+  An example of a `rewrite` setup within a `vercel.json` configuration file that
   points the path `projects/*/edit` to the `edit.html` file.
 </Caption>
 
@@ -261,7 +261,7 @@ Another example is to use the `Accept` header to serve a different kind of conte
 For a path that is not a file but a directory, <ProductShortV1Name /> will automatically render a list of all the files and directories contained inside that directory.
 
 **Usage**:<br />
-This option can be disabled by passing `false` to the option from within a `now.json` configuration file.
+This option can be disabled by passing `false` to the option from within a `vercel.json` configuration file.
 
 ```json
 {
@@ -272,7 +272,7 @@ This option can be disabled by passing `false` to the option from within a `now.
 ```
 
 <Caption>
-  Disabling `directoryListing` for an app in a `now.json` configuration file.
+  Disabling `directoryListing` for an app in a `vercel.json` configuration file.
 </Caption>
 
 It can also be used to restrict listing to certain paths:
@@ -295,7 +295,7 @@ It can also be used to restrict listing to certain paths:
 To prevent listing certain files in the directory listing that <ProductShortV1Name /> provides, if it is enabled, use the `unlisted` property.
 
 **Usage**:<br />
-This option can be disabled by passing `false` to the option from within a `now.json` configuration file.
+This option can be disabled by passing `false` to the option from within a `vercel.json` configuration file.
 
 ```json
 {

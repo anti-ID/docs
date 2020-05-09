@@ -12,7 +12,7 @@ export const meta = {
   description: `The answers to our most frequently asked questions for ${PRODUCT_SHORT_V1_NAME} and other ${ORG_NAME} products and services`,
   date: '30 Jan 2018',
   editUrl: 'pages/docs/v1/other/faq.mdx',
-  lastEdited: '2020-04-16T01:25:09.000Z'
+  lastEdited: '2020-05-09T14:31:59.000Z'
 }
 
 ## Where can I see the current status of the platform?
@@ -351,6 +351,6 @@ Due to the [immutable nature of deployments](/docs/other/faq#how-do-i-update-my-
 
 ## How can I use a separate <NameWrapper name={PRODUCT_SHORT_V1_NAME} /> configuration for staging and production?
 
-You can have a `now.staging.json` file and a `now.json` for production and use the parameter `--local-config=now.staging.json` while deploying (or aliasing) to customize the configuration file to use.
+You can have a `now.staging.json` file and a `vercel.json` for production and use the parameter `--local-config=now.staging.json` while deploying (or aliasing) to customize the configuration file to use.
 
 export default ({ children }) => <Doc meta={meta}>{children}</Doc>

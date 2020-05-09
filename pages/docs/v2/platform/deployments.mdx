@@ -15,7 +15,7 @@ export const meta = {
   title: 'Deployments',
   description: `Understanding and making deployments with ${PRODUCT_NAME}.`,
   editUrl: 'pages/docs/v2/platform/deployments.mdx',
-  lastEdited: '2020-04-16T03:34:45.000Z'
+  lastEdited: '2020-05-09T14:31:59.000Z'
 }
 
 A deployment is the result of building your [Project](/docs/v2/platform/projects/) and making it available through a live URL.
@@ -178,7 +178,7 @@ The URL structure of each preview deployment contains the name of the applicatio
 
 ​<ProductName /> generates a new UID (and therefore a new deployment), by combining the following information into an internal digest that is looked up within the deployment database:
 
-- The entire deployment configuration from `now.json`.
+- The entire deployment configuration from `vercel.json`.
 - The owner ID (either the user ID or team ID, if deploying within a team).
 - The description of the filesystem. This includes symlinks, [modes](<https://en.wikipedia.org/wiki/Modes_(Unix)>), pathnames, and the [checksum](https://en.wikipedia.org/wiki/Checksum) of each file's contents.
 

@@ -13,7 +13,7 @@ export const meta = {
   date: '12 July 2018',
   editUrl: 'pages/docs/v1/static-deployments/builds/building-with-now.mdx',
   image: process.env.IMAGE_ASSETS_URL + '/docs/static-builds/tw-card.png',
-  lastEdited: '2020-04-16T01:25:09.000Z'
+  lastEdited: '2020-05-09T14:31:59.000Z'
 }
 
 With <ProductShortV1Name />, you can build static apps when deploying using a `Dockerfile`. You can build a static app however you wish and then output the content in a directory called `/public` for <ProductShortV1Name /> to upload after the build.
@@ -22,7 +22,7 @@ This works incredibly well with our [GitHub integration](/github). You can use t
 
 ## Quickstart
 
-To build your static apps and deploy them on <ProductShortV1Name /> you'll need to create a `Dockerfile` that exports a static app to the `/public` directory. There must also be a `now.json` file with `"type": "static"` for <ProductShortV1Name /> to recognize that it should be built and deployed as a static app. Running `now` with this configuration will result in a static app built and deployed on <ProductShortV1Name />.
+To build your static apps and deploy them on <ProductShortV1Name /> you'll need to create a `Dockerfile` that exports a static app to the `/public` directory. There must also be a `vercel.json` file with `"type": "static"` for <ProductShortV1Name /> to recognize that it should be built and deployed as a static app. Running `now` with this configuration will result in a static app built and deployed on <ProductShortV1Name />.
 
 Now let's take a look at a more in-depth example.
 
@@ -93,7 +93,7 @@ If you don't want to copy all of your files to the working directory, [create a 
 
 ### Step 3: Configuring <NameWrapper name={PRODUCT_SHORT_V1_NAME} /> for Static deployments
 
-For <ProductShortV1Name /> to recognize our deployment as a static app, we'll need to mark it as a `static` type. To do this, we can add the following to the `now.json` configuration.
+For <ProductShortV1Name /> to recognize our deployment as a static app, we'll need to mark it as a `static` type. To do this, we can add the following to the `vercel.json` configuration.
 
 ```
 {
@@ -102,16 +102,16 @@ For <ProductShortV1Name /> to recognize our deployment as a static app, we'll ne
 ```
 
 <Caption>
-  Setting `type` as `static` in a `now.json` file. Read more about{' '}
+  Setting `type` as `static` in a `vercel.json` file. Read more about{' '}
   <Link href="/docs/features/configuration">
     configuring <ProductShortV1Name />
   </Link>
   .
 </Caption>
 
-> Please note that you can extend your `now.json` file as needed, but `"type": "static"` is required for static builds.
+> Please note that you can extend your `vercel.json` file as needed, but `"type": "static"` is required for static builds.
 
-Although having a `now.json` is the preferred method for configuring your app deployments, you can also use the following with [<CliV1Name />](/docs/clients/now-cli):
+Although having a `vercel.json` is the preferred method for configuring your app deployments, you can also use the following with [<CliV1Name />](/docs/clients/now-cli):
 
 <TerminalInput>now --static </TerminalInput>
 
@@ -223,7 +223,7 @@ RUN npm run build && mv build /public
   `/public` directory
 </Caption>
 
-If you are using routing in your SPA don't forget to add a rewriting rule to point to your `index.html`. This can be done by editing `now.json` and adding the following block
+If you are using routing in your SPA don't forget to add a rewriting rule to point to your `index.html`. This can be done by editing `vercel.json` and adding the following block
 
 ```
 "static": {
@@ -266,7 +266,7 @@ RUN echo "All tests passed!" > index.txt
 
 ## Using Environment Variables and Secrets
 
-You can use a `now.json` configuration file and the `now secrets` command in tandem for use with the build step for static deployments.
+You can use a `vercel.json` configuration file and the `now secrets` command in tandem for use with the build step for static deployments.
 
 [Read more about how to configure them and use them](/docs/features/build-env-and-secrets).
 

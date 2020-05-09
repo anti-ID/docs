@@ -49,11 +49,11 @@ want to deploy your directory to. You can choose to either link an existing proj
 ? Which scope do you want to deploy to? My Awesome Team
 ? Link to existing project? [y/N] y
 ? What’s the name of your existing project? my-lovely-project
-🔗 Linked to awesome-team/my-lovely-project (created .now and added it to .gitignore)`} />
+🔗 Linked to awesome-team/my-lovely-project (created .vercel and added it to .gitignore)`} />
 <Caption>Linking an existing project when running <InlineCode>now</InlineCode> in a new directory.</Caption>
 
-Once set up, a new `.now` directory will be added to your directory. The `.now` directory contains
-both the organization and project `id` of your project. If you want unlink your directory, you can remove the `.now` directory.
+Once set up, a new `.vercel` directory will be added to your directory. The `.vercel` directory contains
+both the organization and project `id` of your project. If you want unlink your directory, you can remove the `.vercel` directory.
 
 You can use the[`--confirm` option](#commands/overview/unique-options/confirm) to skip these questions.
 
@@ -105,7 +105,7 @@ The `--build-env` option, shorthand `-b`, can be used to provide environment var
 #### Confirm
 
 The `--confirm` option can be used to skip questions you are asked when setting up a new project.
-The questions will be answered with the provided defaults, inferred from `now.json` and the folder name.
+The questions will be answered with the provided defaults, inferred from `vercel.json` and the folder name.
 
 ##### Usage Example
 

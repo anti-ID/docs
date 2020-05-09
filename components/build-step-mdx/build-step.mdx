@@ -306,6 +306,7 @@ By default, <ProductName /> ignores certain files and folders for security and p
 .cache
 .next
 .now
+.vercel
 .npmignore
 .dockerignore
 .gitignore
@@ -331,7 +332,7 @@ CVS
 
 <Note>
   You do not need to add any of the above files and folders to your{' '}
-  <InlineCode>.nowignore</InlineCode> file.
+  <InlineCode>.vercelignore</InlineCode> file.
 </Note>
 
 ## Technical Details
@@ -352,7 +353,7 @@ If a deployment fails, a cache may still be established for successfully built f
 
 ### Private npm Modules for Static Builds
 
-To install private npm modules, define `NPM_TOKEN` as a [build environment variable](/docs/configuration#project/build-env) in a `now.json` file.
+To install private npm modules, define `NPM_TOKEN` as a [build environment variable](/docs/configuration#project/build-env) in a `vercel.json` file.
 
 Alternatively, define `NPM_RC` as a [build environment variable](/docs/configuration#project/build-env) with the contents of `~/.npmrc`.
 
@@ -372,14 +373,14 @@ If you need to ignore the cache for a deployment, you can do so by using the [`-
 
 Some frameworks do not use `package.json` to select a specific version to install during build time.
 
-By including [a `build.env` configuration property](/docs/configuration#project/build-env) in [a `now.json` file](/docs/configuration) at your project's root, you can define your framework's version with one of the following keys:
+By including [a `build.env` configuration property](/docs/configuration#project/build-env) in [a `vercel.json` file](/docs/configuration) at your project's root, you can define your framework's version with one of the following keys:
 
 | Framework | Build Env Key  |
 | --------- | -------------- |
 | Hugo      | `HUGO_VERSION` |
 | Zola      | `ZOLA_VERSION` |
 
-For example, defining the Hugo version in a `now.json` file would look like the following snippet:
+For example, defining the Hugo version in a `vercel.json` file would look like the following snippet:
 
 ```json
 {
@@ -393,7 +394,7 @@ For example, defining the Hugo version in a `now.json` file would look like the 
 
 <Caption>
   An example of defining a version for Hugo with a{' '}
-  <InlineCode>now.json</InlineCode> configuration.
+  <InlineCode>vercel.json</InlineCode> configuration.
 </Caption>
 
 <Note>
