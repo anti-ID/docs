@@ -91,7 +91,7 @@ A header often abbreviated as [HSTS](https://developer.mozilla.org/en-US/docs/Gl
 
 ### `x-robots-tag`
 
-This header is automatically added with `noindex` to preview deployments to prevent search engines from crawling them. A deployment without this header can be created by [pointing a production domain to it](https://vercel.com/docs/v2/custom-domains#adding-a-domain). If this is not desired, one can always disable the header manually using the [headers configuration](https://vercel.com/docs/configuration#project/headers).
+This header is automatically added with `noindex` to preview deployments (any domain not listed on a project) to prevent search engines from crawling them. A deployment without this header can be created by [pointing a production domain to it](https://vercel.com/docs/v2/custom-domains#adding-a-domain). If this is not desired, one can always disable the header manually using the [headers configuration](https://vercel.com/docs/configuration#project/headers).
 
 ### `x-now-cache`
 
